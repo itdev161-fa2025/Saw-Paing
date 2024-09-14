@@ -1,5 +1,7 @@
 import express from 'express';
 import connectDatabase from './Config/db'; 
+import { check, validationResult } from 'express-validator';
+
 
 const app = express();
 
@@ -31,6 +33,7 @@ app.post('/api/users',
       return res.send(req.body);
     }
 });
+
 
 app.listen(3000, () => {
     console.log('Express server running on port 3000');

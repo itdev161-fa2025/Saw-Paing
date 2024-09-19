@@ -1,15 +1,34 @@
 import React from 'react'
 import './App.css';
+import axios from 'axios';
 
 class App extends React.Component {
-  render () {
+  state = {
+    data: null
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:3001')
+      .then((response) => {
+        this.setState({
+          data: response.data
+        })
+      })
+      .catch((error) => {
+        console.error(`Error fetching data ${error}`);
+      })
+  }
+
+  render() {
     return (
-      <div className='App'>
+      <div className='App'> 
         <header className='App-header'>
-        GoodThings
+          GoodThings
         </header>
+        {this.state.data}
       </div>
     )
   }
 }
+
 export default App;

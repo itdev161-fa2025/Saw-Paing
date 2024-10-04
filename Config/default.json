@@ -1,3 +1,4 @@
 {
-    "mongoURL": "mongodb+srv://paings:activity2@saw.c0e9t.mongodb.net/?retryWrites=true&w=majority&appName=Saw"
+    "mongoURI": "mongodb+srv://paings:activity5@saw.c0e9t.mongodb.net/?retryWrites=true&w=majority&appName=Saw",
+    "jwtSecret": "Banana"
 }
